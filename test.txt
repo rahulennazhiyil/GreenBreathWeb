@@ -1,0 +1,240 @@
+```md
+# 🌿 GreenBreathWeb
+
+**GreenBreathWeb** is a next-generation, immersive web experience built with **Angular 17+**, combining **3D visuals, motion design, scroll-driven storytelling, and ambient sound**.  
+It blends **nature + technology** to create a calm, futuristic, and award-level web experience.
+
+This README is optimized for **AI-integrated IDEs** (Cursor, VS Code Copilot, JetBrains AI, etc.) to clearly understand project intent, architecture, and responsibilities.
+
+---
+
+## 🚀 Vision
+
+Create a website that feels **alive and breathing**.
+
+- Immersive 3D environments
+- Cinematic motion & transitions
+- Scroll-based storytelling
+- Ambient, reactive sound design
+- High performance & clean Angular architecture
+
+---
+
+## 🧠 Core Principles
+
+- **Angular 19+ Standalone APIs**
+- **Feature-based architecture**
+- **Experience-first design**
+- **Separation of UI, Motion, 3D, and Sound**
+- **Performance-driven (60fps target)**
+- **Accessibility & graceful fallbacks**
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- Angular 19+ (Standalone Components)
+- TypeScript
+- RxJS + Signals
+
+### 3D & Motion
+
+- Three.js (WebGL)
+- GSAP + ScrollTrigger
+- Web Animations API
+
+### Audio
+
+- Web Audio API
+- Ambient + interaction-based sound
+
+### Styling
+
+- SCSS
+- CSS Variables
+- GPU-friendly animations
+
+---
+
+## 📁 Project Structure
+```
+
+src/
+│
+├── app/
+│ ├── core/ # App-wide singletons
+│ │ ├── audio/ # Sound engine & audio context
+│ │ ├── three/ # Three.js renderer & scene manager
+│ │ ├── animation/ # GSAP & scroll orchestration
+│ │ ├── config/ # App & environment config
+│ │ └── services/
+│ │
+│ ├── shared/ # Reusable UI & utilities
+│ │ ├── components/
+│ │ ├── directives/
+│ │ └── utils/
+│ │
+│ ├── experience/ # Immersive experience layer
+│ │ ├── canvas/ # WebGL canvas wrapper
+│ │ ├── scenes/ # Individual 3D scenes
+│ │ ├── effects/ # Particles, fog, lighting
+│ │ ├── motion/ # Scroll-driven animations
+│ │ └── sound/ # Scene-specific sounds
+│ │
+│ ├── features/ # Lazy-loaded sections
+│ │ ├── home/
+│ │ ├── about/
+│ │ ├── impact/
+│ │ ├── story/
+│ │ └── cta/
+│ │
+│ ├── layout/ # App shell
+│ │ ├── header/
+│ │ ├── footer/
+│ │ ├── navigation/
+│ │ └── sound-toggle/
+│ │
+│ ├── state/ # Global state (Signals + RxJS)
+│ │ ├── experience.store.ts
+│ │ ├── audio.store.ts
+│ │ └── scroll.store.ts
+│ │
+│ ├── app.routes.ts
+│ ├── app.component.ts
+│ └── app.config.ts
+│
+├── assets/
+│ ├── models/ # GLTF / GLB models
+│ ├── textures/
+│ ├── sounds/
+│ └── shaders/
+│
+├── styles/
+│ ├── base/
+│ ├── themes/
+│ ├── animations/
+│ └── variables.scss
+│
+└── main.ts
+
+```
+
+---
+
+## 🧩 Architecture Overview
+
+### UI Layer
+- Angular Standalone Components
+- Pure presentation logic
+- Minimal business logic
+
+### Experience Layer (Key Innovation)
+- Single WebGL canvas
+- Multiple 3D scenes
+- Scroll & interaction driven
+- Controlled via services and state
+
+### Motion Layer
+- GSAP timelines
+- Scroll position → animation mapping
+- Scene-based transitions
+
+### Sound Layer
+- Central AudioContext
+- Ambient looping sounds
+- Interaction-based effects
+- Global mute & fade controls
+
+### State Layer
+- Angular Signals for UI state
+- RxJS for animation, scroll, and timing flows
+
+---
+
+## 🎮 3D & Scene Lifecycle
+
+1. App initializes WebGL canvas
+2. Scene manager loads required scene
+3. Models & textures lazy-loaded
+4. RAF loop starts only when needed
+5. Scroll updates camera & animations
+6. Scene disposed when route changes
+
+---
+
+## 🔊 Sound Design Strategy
+
+- Ambient sound enabled only after user interaction
+- Scroll subtly modulates filters/volume
+- Global sound toggle
+- Accessibility-friendly (disabled by default)
+
+---
+
+## ⚡ Performance Strategy
+
+- Lazy-load routes, scenes, and assets
+- One shared WebGL renderer
+- requestAnimationFrame only when active
+- Reduced-motion fallback
+- Progressive enhancement for low-end devices
+
+---
+
+## 🧭 Routing Strategy
+
+- Feature-based lazy loading
+- Each route controls its own scene, motion, and sound
+- Clean URL structure
+
+---
+
+## 📱 Responsiveness & Accessibility
+
+- Desktop-first immersive experience
+- Mobile-optimized interactions
+- Keyboard navigation
+- ARIA-friendly components
+- Motion reduction support
+
+---
+
+## 🏗️ Development Guidelines
+
+- Prefer **Standalone Components**
+- Keep UI, Motion, 3D, and Sound separated
+- Avoid heavy logic inside components
+- Use services for orchestration
+- Write self-documenting code
+- Optimize for smooth animations
+
+---
+
+## 🌱 Future Enhancements
+
+- WebXR / AR support
+- Shader-based breathing effects
+- Real-time environmental data visualization
+- AI-driven motion personalization
+
+---
+
+## 🏆 Quality Target
+
+- Awwwards-level experience
+- Recruiter-impressive architecture
+- Production-ready Angular codebase
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+**GreenBreathWeb**
+_An immersive web experience where technology breathes with nature._
+```
